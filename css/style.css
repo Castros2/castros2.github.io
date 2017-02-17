@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+header {
+	font-family:"Source Sans Pro";
+}
+
+h1 a{
+	color:black;
+	text-decoration: none;
+}
+
+nav {
+	font-family:"Source Sans Pro";
+}
+
+#navList {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:grey;
+}
+
+.navLink {
+	float: left;
+}
+
+.navLink a{
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 10px 16px;
+	text-decoration: none;
+	background-color:grey;
+}
+
+.active a{
+	color: white;
+	background-color:black;
+}
+
+.navLink a:hover {
+	background-color:black;
+	color:white;
+}
+
+#me {
+	width: 500px;
+}
+
+body {
+}
+
+p {
+	font-family: "Source Sans Pro";
+}
