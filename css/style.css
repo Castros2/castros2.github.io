@@ -48,9 +48,20 @@ nav {
 	width: 500px;
 }
 
+
 body {
 }
 
 p {
 	font-family: "Source Sans Pro";
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-style:solid;
+    border-width: 1px;
 }
