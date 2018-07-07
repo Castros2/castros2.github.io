@@ -262,6 +262,7 @@ function gameOver(){
 	ctx.textAlign = "center";
 	ctx.clearRect(0,0,c.width,c.height);
 	ctx.strokeText("Game Over!", c.width/2, c.height/2);
+	ctx.strokeText("Snake Length: " + linkLength, c.width/2, c.height/2 + 60)
 }
 
 			// var randomNumber = Math.floor(Math.random() * 100) + 1;
