@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+h1 {
+    color:black;
+	text-decoration: none;
+	font-family:"Josefin Sans";
+}
+
+button {
+    display:inline-block;
+    vertical-align: top;
+    padding: 12px 28px;
+    font-size: 16px;
+    text-align: center;
+}

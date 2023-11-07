@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Stephen Castro">
+		<meta name="description" content="Pokemon TCGPlayer Decklist Converter">
+		<title> Pokemon TCGPlayer Decklist Converter </title>
+		<link rel="stylesheet" href="css/pkmnstyle.css">
+	</head>
     <body>
-    <script src="pkmnconvert.js"></script>
-        <textarea id="input-area" rows="40" cols="80"></textarea>
+        <script src="pkmnconvert.js"></script>
+
+        <h1>Pokemon TCG Decklist to TCGPlayer Mass Entry Converter</h1>
+        <textarea id="input-area" rows="30" cols="80"></textarea>
         <button type="submit" id="submitButton" onclick="handleConvert()">Convert</button>
         <div>
             <pre id="output"></pre>
