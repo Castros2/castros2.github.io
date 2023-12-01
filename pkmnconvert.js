@@ -8,11 +8,14 @@ function handleConvert(val) {
     var lines = inputArea.value.split("\n");
 
     var jsonData;
+    console.log("json data is " + jsonData)
     if(val === "tcg") {
         jsonData = "./pkmndata.json"
     } else if (val === "csi") {
         jsonData = "./csiData.json"
     }
+
+    console.log("json data is now" + jsonData)
 
     fetch(jsonData)
       .then((response) => response.json())
