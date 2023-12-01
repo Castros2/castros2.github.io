@@ -13,7 +13,8 @@
 
         <h1>Pokemon TCG Decklist to TCGPlayer Mass Entry Converter</h1>
         <textarea id="input-area" rows="30" cols="80"></textarea>
-        <button type="submit" id="submitButton" onclick="handleConvert()">Convert</button>
+        <button type="submit" id="submitButton" value="tcg" onclick="handleConvert(this.value)">Convert to TCGPlayer</button>
+        <button type="submit" id="submitButton" value="csi" onclick="handleConvert(this.value)">Convert to CoolStuffInc</button>
         <div>
             <pre id="output"></pre>
         </div>

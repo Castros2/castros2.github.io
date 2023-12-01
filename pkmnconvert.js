@@ -1,4 +1,4 @@
-function handleConvert() {
+function handleConvert(val) {
     var output = document.getElementById("output");
     while(output.firstChild) {
         output.removeChild(output.firstChild);
@@ -7,7 +7,14 @@ function handleConvert() {
     const inputArea = document.getElementById("input-area");
     var lines = inputArea.value.split("\n");
 
-    fetch("./pkmndata.json")
+    var jsonData;
+    if(val === "tcg") {
+        jsonData = "./pkmndata.json"
+    } else if (val === "csi") {
+        jsonData = "./csiData.json"
+    }
+
+    fetch(jsonData)
       .then((response) => response.json())
       .then((data) => {
         for (var j = 0; j < lines.length; j++) {
