@@ -37,7 +37,18 @@ function handleConvert(val) {
       output.scrollTop
 }
 
+function showSnackbar() {
+    var snackbar = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    snackbar.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+}
+
 function copyText() {
     var output = document.getElementById("output");
     navigator.clipboard.writeText(output.innerHTML);
+    showSnackbar();
 }

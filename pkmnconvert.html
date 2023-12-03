@@ -15,9 +15,10 @@
         <div class="text-areas-wrapper">
             <textarea id="input-area" class="text-io" rows="30" cols="80"></textarea>
             <div id="output" class="text-io"></div>
-            <button id="copyButton">Copy</button>
+            <button id="copyButton" onClick="copyText()">Copy</button>
         </div>
         <button type="submit" id="submitTcgButton" value="tcg" onclick="handleConvert(this.value)">Convert to TCGPlayer</button>
         <button type="submit" id="submitCsiButton" value="csi" onclick="handleConvert(this.value)">Convert to CoolStuffInc</button>
+        <div id="snackbar">Copied to clipboard!</div>
     </body>
 </html>
