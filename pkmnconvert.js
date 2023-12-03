@@ -8,14 +8,11 @@ function handleConvert(val) {
     var lines = inputArea.value.split("\n");
 
     var jsonData;
-    console.log("json data is " + jsonData)
     if(val === "tcg") {
         jsonData = "./pkmndata.json"
     } else if (val === "csi") {
         jsonData = "./csiData.json"
     }
-
-    console.log("json data is now" + jsonData)
 
     fetch(jsonData)
       .then((response) => response.json())
@@ -31,12 +28,16 @@ function handleConvert(val) {
                 var quantity = lineSplit[0];
                 if (data.hasOwnProperty(key)) {
                     var tcgLine = quantity.concat(" ", data[key]);
-
-                    var content = document.createTextNode(tcgLine + "\n");
-                    output.appendChild(content);
+                    output.innerHTML = output.innerHTML + tcgLine + "\n"
                 }
             }
         }
       })
       .catch(console.error);
+      output.scrollTop
+}
+
+function copyText() {
+    var output = document.getElementById("output");
+    navigator.clipboard.writeText(output.innerHTML);
 }
