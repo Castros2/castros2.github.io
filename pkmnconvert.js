@@ -22,6 +22,12 @@ function handleConvert(val) {
             var lineSplit = line.split(" ");
             if (lineSplit.length > 2) {
                 var number = lineSplit.pop();
+
+                // Pop off "PH" that PTCGL adds at the end for parallel holos
+                if(number === "PH") {
+                    number = lineSplit.pop();
+                }
+                
                 var set_ = lineSplit.pop();
 
                 var key = set_.concat(" ", number);
